@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba916be65cc4134a78e92cf6fad6ef6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  view: {fileID: 0}
+  view: {fileID: 1970881698}
 --- !u!1 &223064179
 GameObject:
   m_ObjectHideFlags: 0
@@ -2644,6 +2644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1970881696}
   - component: {fileID: 1970881697}
+  - component: {fileID: 1970881698}
   m_Layer: 5
   m_Name: View
   m_TagString: Untagged
@@ -2689,7 +2690,148 @@ MonoBehaviour:
   OutputDirectory: Source/Example
   OutputNamespace: GenView.Example
   OutputClassName: PhoneView
-  AssemblyName: Assembly-CSharp
+  AssemblyName: GenViewExample
+--- !u!114 &1970881698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970881695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47d74c58340195a4aa03d113d4ba5705, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rectTransform: {fileID: 1970881696}
+  _viewGenerationAssistant: {fileID: 1970881697}
+  _background:
+    _rectTransform: {fileID: 480447550}
+    _canvasRenderer: {fileID: 480447552}
+    _image: {fileID: 480447551}
+  _display:
+    _rectTransform: {fileID: 1650791012}
+    _background:
+      _rectTransform: {fileID: 1990512150}
+      _canvasRenderer: {fileID: 1990512152}
+      _image: {fileID: 1990512151}
+    _text:
+      _rectTransform: {fileID: 1098193119}
+      _canvasRenderer: {fileID: 1098193121}
+      _text: {fileID: 1098193120}
+  _keypadContainer:
+    _rectTransform: {fileID: 292420265}
+    _grid:
+      _rectTransform: {fileID: 1898753830}
+      _gridLayoutGroup: {fileID: 1898753831}
+      _button1:
+        _rectTransform: {fileID: 291815502}
+        _canvasRenderer: {fileID: 291815505}
+        _image: {fileID: 291815504}
+        _button: {fileID: 291815503}
+        _text:
+          _rectTransform: {fileID: 223064180}
+          _canvasRenderer: {fileID: 223064182}
+          _text: {fileID: 223064181}
+      _button2:
+        _rectTransform: {fileID: 2138307139}
+        _canvasRenderer: {fileID: 2138307142}
+        _image: {fileID: 2138307141}
+        _button: {fileID: 2138307140}
+        _text:
+          _rectTransform: {fileID: 1723915538}
+          _canvasRenderer: {fileID: 1723915540}
+          _text: {fileID: 1723915539}
+      _button3:
+        _rectTransform: {fileID: 937786054}
+        _canvasRenderer: {fileID: 937786057}
+        _image: {fileID: 937786056}
+        _button: {fileID: 937786055}
+        _text:
+          _rectTransform: {fileID: 1924140881}
+          _canvasRenderer: {fileID: 1924140883}
+          _text: {fileID: 1924140882}
+      _button4:
+        _rectTransform: {fileID: 253939979}
+        _canvasRenderer: {fileID: 253939982}
+        _image: {fileID: 253939981}
+        _button: {fileID: 253939980}
+        _text:
+          _rectTransform: {fileID: 144391678}
+          _canvasRenderer: {fileID: 144391680}
+          _text: {fileID: 144391679}
+      _button5:
+        _rectTransform: {fileID: 743254953}
+        _canvasRenderer: {fileID: 743254956}
+        _image: {fileID: 743254955}
+        _button: {fileID: 743254954}
+        _text:
+          _rectTransform: {fileID: 669728911}
+          _canvasRenderer: {fileID: 669728913}
+          _text: {fileID: 669728912}
+      _button6:
+        _rectTransform: {fileID: 954727208}
+        _canvasRenderer: {fileID: 954727211}
+        _image: {fileID: 954727210}
+        _button: {fileID: 954727209}
+        _text:
+          _rectTransform: {fileID: 1480559038}
+          _canvasRenderer: {fileID: 1480559040}
+          _text: {fileID: 1480559039}
+      _button7:
+        _rectTransform: {fileID: 1677527578}
+        _canvasRenderer: {fileID: 1677527581}
+        _image: {fileID: 1677527580}
+        _button: {fileID: 1677527579}
+        _text:
+          _rectTransform: {fileID: 1693413259}
+          _canvasRenderer: {fileID: 1693413261}
+          _text: {fileID: 1693413260}
+      _button8:
+        _rectTransform: {fileID: 1429643741}
+        _canvasRenderer: {fileID: 1429643744}
+        _image: {fileID: 1429643743}
+        _button: {fileID: 1429643742}
+        _text:
+          _rectTransform: {fileID: 2064125502}
+          _canvasRenderer: {fileID: 2064125504}
+          _text: {fileID: 2064125503}
+      _button9:
+        _rectTransform: {fileID: 888568931}
+        _canvasRenderer: {fileID: 888568934}
+        _image: {fileID: 888568933}
+        _button: {fileID: 888568932}
+        _text:
+          _rectTransform: {fileID: 1661619293}
+          _canvasRenderer: {fileID: 1661619295}
+          _text: {fileID: 1661619294}
+      _button_star:
+        _rectTransform: {fileID: 127213729}
+        _canvasRenderer: {fileID: 127213732}
+        _image: {fileID: 127213731}
+        _button: {fileID: 127213730}
+        _text:
+          _rectTransform: {fileID: 68777237}
+          _canvasRenderer: {fileID: 68777239}
+          _text: {fileID: 68777238}
+      _button_0:
+        _rectTransform: {fileID: 2106935257}
+        _canvasRenderer: {fileID: 2106935260}
+        _image: {fileID: 2106935259}
+        _button: {fileID: 2106935258}
+        _text:
+          _rectTransform: {fileID: 2055462682}
+          _canvasRenderer: {fileID: 2055462684}
+          _text: {fileID: 2055462683}
+      _button_sharp:
+        _rectTransform: {fileID: 1713152638}
+        _canvasRenderer: {fileID: 1713152641}
+        _image: {fileID: 1713152640}
+        _button: {fileID: 1713152639}
+        _text:
+          _rectTransform: {fileID: 2125523111}
+          _canvasRenderer: {fileID: 2125523113}
+          _text: {fileID: 2125523112}
 --- !u!1 &1990512149
 GameObject:
   m_ObjectHideFlags: 0
