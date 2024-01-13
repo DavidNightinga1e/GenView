@@ -1,22 +1,26 @@
 ﻿using System;
 using System.Text;
 
-namespace GenView.Core
+namespace GenViewEditor
 {
 	public static class CodeGenSnippets
 	{
-		public static void CreateComponentField(StringBuilder sb, Type componentType, int tabCount)
+		public static void CreateComponentField(StringBuilder sb, Type componentType, int tabCount, bool hideInInspector)
 		{
 			string typeFullName = componentType.FullName;
 			string name = componentType.Name;
-			CreateComponentField(sb, typeFullName, name, tabCount);
+			CreateComponentField(sb, typeFullName, name, tabCount, hideInInspector);
 		}
 
-		public static void CreateComponentField(StringBuilder sb, string componentType, string name, int tabCount)
+		public static void CreateComponentField(StringBuilder sb, string componentType, string name, int tabCount, bool hideInInspector)
 		{
 			PushTabs(sb, tabCount);
 			string field = name.ToPrivateField();
-			sb.AppendLine($"[UnityEngine.SerializeField] private {componentType} {field};");
+			string attributes = hideInInspector
+				? "[UnityEngine.SerializeField]"
+				: "[UnityEngine.SerializeField, UnityEngine.HideInInspector]";
+				
+			sb.AppendLine($"{attributes} private {componentType} {field};");
 			PushTabs(sb, tabCount);
 			sb.AppendLine($"public {componentType} {name.ToPublicProperty()} => {field};");
 		}
@@ -35,7 +39,7 @@ namespace GenView.Core
 				PushTabs(sb, tabCount);
 			}
 			sb.AppendLine(isRootClass
-				? $"public class {className} : GenView.Core.GeneratedView"
+				? $"public class {className} : GenView.GeneratedView"
 				: $"public class {className}");
 			PushTabs(sb, tabCount);
 			sb.AppendLine("{");
@@ -70,7 +74,7 @@ namespace GenView.Core
 				sb.Append("\t");
 		}
 
-		private static string ToPrivateField(this string name)
+		public static string ToPrivateField(this string name)
 		{
 			if (char.IsLower(name, 0))
 				return "_" + name;
@@ -78,7 +82,7 @@ namespace GenView.Core
 			return "_" + char.ToLowerInvariant(name[0]) + name[1..];
 		}
 
-		private static string ToPublicProperty(this string name)
+		public static string ToPublicProperty(this string name)
 		{
 			if (char.IsUpper(name, 0))
 				return name;

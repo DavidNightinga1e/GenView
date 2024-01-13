@@ -1,0 +1,16 @@
+{
+    "name": "GenViewExample",
+    "rootNamespace": "",
+    "references": [
+        "GUID:42a870b4ae5c8474bb67c4f55f4ca15c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

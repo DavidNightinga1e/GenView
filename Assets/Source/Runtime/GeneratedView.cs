@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace GenView.Core
+namespace GenView
 {
 	public abstract class GeneratedView : MonoBehaviour
 	{
